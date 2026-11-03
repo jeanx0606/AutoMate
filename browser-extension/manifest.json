@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "AutoMate 登录助手",
+  "version": "1.0.0",
+  "description": "在 AutoMate 运行时自动填写已配置的登录页面。",
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*",
+    "http://127.0.0.1:32147/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "action": {
+    "default_title": "AutoMate 登录助手"
+  }
+}

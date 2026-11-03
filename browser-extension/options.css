@@ -1,0 +1,52 @@
+* { box-sizing: border-box; }
+
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  color: #1f2933;
+  background: #f4f6f5;
+}
+
+body { margin: 0; padding: 40px 24px; }
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #dfe5e2;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+header { padding: 30px 34px 26px; background: #eff5f1; border-bottom: 1px solid #dfe5e2; }
+.eyebrow { margin: 0 0 10px; color: #35745b; font-size: 11px; font-weight: 700; letter-spacing: 1px; }
+h1 { margin: 0; font-size: 26px; }
+.intro { max-width: 560px; margin: 10px 0 0; color: #59665f; line-height: 1.55; }
+.section { padding: 24px 34px; border-bottom: 1px solid #e7ebe9; }
+.section:last-child { border-bottom: 0; }
+h2 { margin: 0 0 15px; font-size: 16px; }
+label { display: block; margin-bottom: 7px; font-size: 13px; font-weight: 600; }
+.pair-row { display: flex; gap: 8px; }
+.pair-actions { margin-top: 10px; }
+button.danger { padding: 6px 12px; color: #b42318; background: transparent; border: 1px solid #b42318; }
+input { min-width: 0; flex: 1; padding: 10px 12px; border: 1px solid #cbd4cf; border-radius: 5px; font: inherit; }
+button { padding: 10px 16px; border: 0; border-radius: 5px; color: #fff; background: #276c50; font: inherit; font-weight: 600; cursor: pointer; }
+button:disabled { opacity: .55; cursor: wait; }
+.status { min-height: 20px; margin: 9px 0 0; color: #64716a; font-size: 13px; }
+.status.error { color: #b42318; }
+.status.success { color: #207044; }
+.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.section-heading h2 { margin-bottom: 0; }
+.text-button { padding: 4px 0; color: #276c50; background: transparent; }
+.permission-note { margin: 12px 0; color: #64716a; font-size: 12px; line-height: 1.5; }
+.site-list { display: grid; gap: 8px; padding: 0; margin: 0; list-style: none; }
+.site-list li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; padding: 11px 12px; border: 1px solid #e2e8e4; border-radius: 5px; }
+.site-list strong { font-size: 13px; }
+.site-list span { color: #64716a; font-size: 12px; overflow-wrap: anywhere; }
+.site-list .empty { color: #64716a; }
+
+@media (max-width: 520px) {
+  body { padding: 16px 10px; }
+  header, .section { padding: 22px 18px; }
+  .pair-row { flex-direction: column; }
+}

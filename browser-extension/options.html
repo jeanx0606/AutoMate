@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoMate 登录助手设置</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">浏览器扩展配对</p>
+      <h1>浏览器自动登录</h1>
+      <p class="intro">配对一次后，扩展会在 AutoMate 运行时自动处理已配置网站的登录表单。</p>
+    </header>
+
+    <section class="section">
+      <h2>连接 AutoMate</h2>
+      <label for="pairing-code">配对码</label>
+      <div class="pair-row">
+        <input id="pairing-code" type="password" autocomplete="off" placeholder="从 AutoMate 设置中复制配对码">
+        <button id="pair-button" type="button">配对</button>
+      </div>
+      <div class="pair-actions">
+        <button id="unpair-button" type="button" class="danger" hidden>解除配对</button>
+      </div>
+      <p id="pair-status" class="status" role="status"></p>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <h2>自动填充网站</h2>
+        <button id="refresh-button" class="text-button" type="button">刷新</button>
+      </div>
+      <p class="permission-note">安装时授予的网站访问权限由浏览器管理。扩展只会向 AutoMate 请求已配置网站的凭据。</p>
+      <ul id="site-list" class="site-list"></ul>
+    </section>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>

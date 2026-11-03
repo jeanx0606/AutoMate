@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #eaf1f4;
+  --color-surface: #fffefd;
+  --color-surface-muted: #eff3f5;
+  --color-surface-hover: #e2ebef;
+  --color-border: #d2dfe5;
+  --color-text: #253544;
+  --text-secondary: #4f6270;
+  --text-tertiary: #748692;
+  --color-primary: #a3cef1;
+  --color-primary-hover: #6096ba;
+  --color-primary-ink: #274c77;
+  --color-primary-light: #e7ecef;
+  --accent-sky: #d2e5f2;
+  --accent-sky-ink: #345d79;
+  --accent-lavender: #e4d9ef;
+  --accent-lavender-ink: #564570;
+  --accent-peach: #f2d8c6;
+  --accent-peach-ink: #744a35;
+  --accent-rose: #f0d4d9;
+  --accent-rose-ink: #7c3f4b;
+  --accent-mint: #d3e8dc;
+  --accent-mint-ink: #2f5f45;
+  --accent-butter: #f1e3b9;
+  --accent-butter-ink: #6d5524;
+  --status-success: #3d795d;
+  --status-success-bg: #e6f1e9;
+  --status-idle: #93a39a;
+  --status-failed: #a9575e;
+  --status-failed-bg: #f7e9e9;
+  --status-logging: #98723b;
+  --status-warning-bg: #f6f0df;
+  --status-info: #58758a;
+  --status-info-bg: #e9f0f4;
+  --shadow-sm: 0 1px 3px rgba(38, 54, 48, 0.06);
+  --shadow-md: 0 4px 12px rgba(38, 54, 48, 0.09);
+  --radius: 8px;
+  --radius-lg: 12px;
+}
+
+html, body {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 14px;
+  color: var(--color-text);
+  background: linear-gradient(135deg, #e4eff5 0%, #f3e9e7 100%);
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  height: 100%;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.15s ease;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+a {
+  color: #6096ba;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c7d4cd;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aabbb1;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-primary-ink);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+.btn-secondary {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--color-surface-hover);
+}
+
+.btn-danger {
+  background: #fff;
+  color: var(--status-failed);
+  border: 1px solid var(--status-failed);
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: var(--status-failed);
+  color: #fff;
+}
+
+.btn-sm {
+  padding: 5px 12px;
+  font-size: 13px;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status-dot.success { background: var(--status-success); }
+.status-dot.idle { background: var(--status-idle); }
+.status-dot.failed { background: var(--status-failed); }
+.status-dot.logging-in { background: var(--status-logging); animation: pulse 1.2s infinite; }
+.status-dot.pending { background: var(--status-logging); }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}

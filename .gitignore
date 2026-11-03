@@ -1,0 +1,17 @@
+node_modules/
+dist/
+dist-electron/
+*.log
+.DS_Store
+.env
+.env.local
+release/
+nul
+.codeartsdoer/
+
+# ChatAgent —— 保留本地继续开发，不上传仓库
+src/views/ChatAgent.vue
+electron/chatAgent.js
+electron/ollamaInstaller.js
+test/chatAgent.test.js
+test/ollamaInstaller.test.js
